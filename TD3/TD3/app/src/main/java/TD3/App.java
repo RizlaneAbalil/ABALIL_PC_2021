@@ -3,6 +3,9 @@
  */
 package TD3;
 
+import TD3.ExerciceBanque.CompteBancaire;
+import TD3.ExerciceBanque.MonThread;
+
 import java.util.concurrent.Semaphore;
 
 public class App {
@@ -15,7 +18,7 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(new App().getGreeting());
-        MonThread t1= new MonThread(10000, 1, var, s);
+        /*MonThread t1= new MonThread(10000, 1, var, s);
         MonThread t2= new MonThread(10000, -1, var, s);
         t1.start();
         t2.start();
@@ -23,6 +26,10 @@ public class App {
         t1.join();
         t2.join();
 
-        System.out.println(var.val);
+        System.out.println(var.val);*/
+
+        CompteBancaire compteBancaire = new CompteBancaire(0);
+        MonThread paul = new MonThread(compteBancaire);
+
     }
 }
