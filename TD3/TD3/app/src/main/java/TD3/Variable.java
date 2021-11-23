@@ -2,5 +2,5 @@ package TD3;
 
 public class Variable {
 
-    int val = 0;
+    public int val = 0;
 }

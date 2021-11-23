@@ -3,17 +3,20 @@
  */
 package TD3;
 
+import java.util.concurrent.Semaphore;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     static Variable var = new Variable();
+    private static Semaphore s ;
 
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(new App().getGreeting());
-        MonThread t1= new MonThread(10000, 1, var);
-        MonThread t2= new MonThread(10000, -1, var);
+        MonThread t1= new MonThread(10000, 1, var, s);
+        MonThread t2= new MonThread(10000, -1, var, s);
         t1.start();
         t2.start();
 
