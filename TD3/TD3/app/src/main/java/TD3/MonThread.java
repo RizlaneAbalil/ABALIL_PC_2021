@@ -22,10 +22,12 @@ public class MonThread extends Thread{
     public void run()
     {
         for(int i=0; i<cpt; i++) {
+            //Rendre cette opération atomique
             /*synchronized (var) {
                 var.val += inc;
             }*/
-            //Rendre cette opération atomique
+
+            //Soit synchronised soit semaphore
             try{
                 s.acquire();
             }
