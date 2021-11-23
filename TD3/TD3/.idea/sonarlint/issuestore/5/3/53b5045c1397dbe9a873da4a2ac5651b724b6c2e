@@ -1,0 +1,13 @@
+
+O
+java:S3400"9Remove this method and declare a constant for this value.(ÌœØ™
+P
+java:S6213":Rename this variable to not match a restricted identifier.(É‡µ
+S
+java:S1854 "8Remove this useless assignment to local variable "paul".( ˜¦üÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ìâö­
+D
+java:S1481 ")Remove this unused "paul" local variable.( ˜¦üÿÿÿÿ
+;
+java:S1068"%Remove this unused "s" private field.(’Í·ë
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„õ“Ü

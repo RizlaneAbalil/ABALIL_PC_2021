@@ -1,0 +1,15 @@
+
+U
+java:S6213
+":Rename this variable to not match a restricted identifier.(ñã©İùÿÿÿÿ
+P
+java:S6213":Rename this variable to not match a restricted identifier.(æú€
+U
+java:S1161":Add the "@Override" annotation above this method signature(ÿŸ¾Ğüÿÿÿÿ
+t
+java:S2142""^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(‚Üò
+X	java:S125"<This block of commented-out lines of code should be removed.(™£·Â8Ø¦¯êÔ/
+>	java:S108"")Either remove or fill this block of code.(‚Üò
+O
+java:S1199#"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Å€³êÔ/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„õ“Ü
