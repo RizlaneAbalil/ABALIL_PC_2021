@@ -3,34 +3,24 @@
 package TD3;
 
 public class MonThread extends Thread{
-    private static int valeur;
+    private int cpt;
+    private int inc;
+    private Variable var;
 
-    public MonThread()
+    public MonThread(int cpt, int inc, Variable var)
     {
-        this.valeur = 0;
-    }
-
-    public synchronized void inc()
-    {
-        for(int i=0; i<10000; i++) {
-            this.valeur++;
-        }
-        System.out.println("Void inc "+ this.valeur);
-    }
-
-    public synchronized void dec()
-    {
-        for(int i=0; i<10000; i++) {
-            this.valeur--;
-        }
-        System.out.println("Void dec "+ this.valeur);
+        this.cpt = cpt;
+        this.inc = inc;
+        this.var = var;
     }
 
     public void run()
     {
-        inc();
-        dec();
-        System.out.println("Valeur "+this.valeur);
+        for(int i=0; i<cpt; i++) {
+            //Rendre cette opération atomique
+            synchronized (var) {
+                var.val += inc;
+            }
+        }
     }
-
 }

@@ -8,23 +8,18 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args)
-    {
+    static Variable var = new Variable();
+
+    public static void main(String[] args) throws InterruptedException {
         //System.out.println(new App().getGreeting());
-        MonThread t1= new MonThread();
-        MonThread t2= new MonThread();
+        MonThread t1= new MonThread(10000, 1, var);
+        MonThread t2= new MonThread(10000, -1, var);
         t1.start();
         t2.start();
 
-        /*t1.inc();
-        System.out.println("T1 inc");
-        t2.inc();
-        System.out.println("T2 inc");
-        t1.dec();
-        System.out.println("T1 dec");
-        t2.dec();
-        System.out.println("T2 dec");*/
+        t1.join();
+        t2.join();
 
-
+        System.out.println(var.val);
     }
 }
